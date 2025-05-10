@@ -1,0 +1,12 @@
+streamlit
+PyPDF2
+langchain
+langchain-community
+faiss-cpu
+huggingface-hub
+pyttsx3
+langchain-groq
+torch  
+transformers  
+sentence-transformers
+langchain-huggingface

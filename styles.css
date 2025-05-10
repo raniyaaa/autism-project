@@ -1,0 +1,136 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('.venv/images/autismm.jpg') no-repeat center center/cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    width: 600px;
+    background: #23292d;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(114, 173, 215, 0.3);
+    text-align: center;
+    color: #b4dcfc;
+}
+
+/* Heading */
+h2 {
+    font-family: 'Georgia', serif;
+
+    color: #eef2f4;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* File Upload */
+input[type="file"] {
+    margin: 10px 0;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background: #b4d0d6;
+    color: #7e9ca9;
+    cursor: pointer;
+}
+
+/* Upload Button */
+button {
+    font-family: 'Georgia', serif;
+
+    background: #4c88a1;
+    color: rgb(211, 210, 210);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #113b58;
+}
+
+/* Chat Box */
+.chat-box {
+    height: 350px;
+    overflow-y: auto;
+    border: 1px solid #aacbe0;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background: #252525;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Messages */
+.message {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+/* User Message */
+.user {
+    background-color: #67a3c5;
+    color: white;
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Bot Message */
+.bot {
+    background-color: #444444;
+    color: white;
+    text-align: left;
+    margin-right: auto;
+}
+
+/* Input Area */
+.input-area {
+    display: flex;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+/* Input Field */
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #aacbe0;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .chat-box {
+        height: 250px;
+    }
+
+    .message {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}

@@ -1,0 +1,20 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Ignore virtual environment folders
+.venv/
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore environment variable files
+.env
+
+# Ignore Streamlit secrets and config
+.secrets.toml
+.streamlit/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
