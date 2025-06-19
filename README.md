@@ -1,16 +1,19 @@
 ﻿# Autism Project
-This project helps detect early signs of autism by analyzing user responses. It uses a pretrained machine learning model to make predictions,enabling fast and accessible screening.
+This project helps users detect signs of autism by analyzing user responses and PDF content related to Autism Spectrum Disorder (ASD). It uses a pretrained language model (Qwen-2.5 via Groq API) and vector-based search (FAISS + HuggingFace embeddings) to answer queries based on uploaded research papers or medical documents
 
 ## Features
-- Simple and interactive web interface
-- Analyzes answers to a questionnaire
-- Predicts the likelihood of autism based on responses
-- Built with HTML, CSS, JavaScript, and Python
-- Uses a pretrained ML model for classification
+- Upload one or multiple PDFs (research papers, documents, etc.)
+- Extracts and vectorizes the content for efficient semantic search
+- Chatbot powered by LangChain + Groq API (Qwen-2.5-32B)
+- Remembers recent conversation context using memory buffers
+- Strict domain filtering: only answers questions related to autism, neurodiversity, and related medical/social aspects
 ## Tech Stack
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Python (Flask)
 - **ML Model**: Pretrained classifier
+- **LLM**: Groq API (qwen-2.5-32b
+- **PDF Parsing**: PYPDF2
+- **Memory Management**: LangChain ConversationBufferWindowMemory
 ## Files Overview
 - `index.html` – User interface for taking input
 - `styles.css` – Styling for the web page
@@ -18,9 +21,6 @@ This project helps detect early signs of autism by analyzing user responses. It 
 - `back.py` / `vector.py` – Backend ML processing
 - `requirement.txt` – Dependencies for Python backend
 ## Note
-  Due to time constraints, a pretrained model was used instead of training one from scratch. This makes it easier to deploy and test quickly.
-##  Future Improvements
-- Train a custom model on a larger dataset
-- Add multilingual support
-- Improve UI/UX with detailed results
+  Due to time constraints, a pretrained model was used instead of training one from scratch.
+
     
