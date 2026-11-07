@@ -10,3 +10,5 @@ torch
 transformers  
 sentence-transformers
 langchain-huggingface
+flask
+flask-cors

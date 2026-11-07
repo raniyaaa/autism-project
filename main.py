@@ -1,14 +1,14 @@
 import logging
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from PyPDF2 import PdfReader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.chains import ConversationChain
-from langchain.chains.conversation.memory import ConversationBufferWindowMemory
+from langchain_classic.chains import ConversationChain
+from langchain_classic.memory import ConversationBufferWindowMemory
 from langchain_groq import ChatGroq
-from langchain.prompts.chat import (
+from langchain_core.prompts import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
@@ -20,8 +20,17 @@ import os
 load_dotenv()
 
 # Initialize Flask App
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="frontend",
+    static_folder="frontend",
+    static_url_path="/static"
+)
 CORS(app)  # Enable CORS for frontend communication
+
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 # Configure Logging
 logging.basicConfig(level=logging.ERROR, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -93,7 +102,7 @@ def query():
             memory.save_context({"input": message["human"]}, {"output": message["AI"]})
 
         # Initialize Groq AI Model
-        groq_chat = ChatGroq(groq_api_key=GROQ_API_KEY, model_name="qwen-2.5-32b")
+        groq_chat = ChatGroq(groq_api_key=GROQ_API_KEY, model_name="openai/gpt-oss-120b")
 
 
 

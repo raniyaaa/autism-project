@@ -1,14 +1,14 @@
 import logging
 import streamlit as st
 from PyPDF2 import PdfReader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.text_splitters import RecursiveCharacterTextSplitter
 
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 
 
-from langchain.chains import ConversationChain
-from langchain.chains.conversation.memory import ConversationBufferWindowMemory
+from langchain_classic.chains import ConversationChain
+from langchain_classic.memory import ConversationBufferWindowMemory
 from langchain_groq import ChatGroq
 
 groq_api_key = st.secrets["groq"]["API_KEY"]

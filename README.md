@@ -11,7 +11,7 @@ This project helps users detect signs of autism by analyzing user responses and 
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Python (Flask)
 - **ML Model**: Pretrained classifier
-- **LLM**: Groq API (qwen-2.5-32b
+- **LLM**: Groq API (qwen-2.5-32b)
 - **PDF Parsing**: PYPDF2
 - **Memory Management**: LangChain ConversationBufferWindowMemory
 ## Files Overview
